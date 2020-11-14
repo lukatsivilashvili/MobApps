@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/my_blue">
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewEnd"
+        android:textSize="40sp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/my_yellow"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="clearClick"
+            android:background="@color/my_grey"
+            android:gravity="center"
+            android:text="CLEAR"
+            android:textStyle="bold"
+            android:textColor="@color/my_yellow"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:background="@color/my_grey"
+            android:onClick="operationClick"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="/"
+            android:textColor="@color/my_yellow"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="numberClick"
+                android:text="7"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="numberClick"
+                android:text="8"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="numberClick"
+                android:text="9"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/my_pink"
+                android:gravity="center"
+                android:onClick="operationClick"
+                android:text="*"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="numberClick"
+                android:text="4"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="numberClick"
+                android:text="5"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="6"
+                android:onClick="numberClick"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/my_pink"
+                android:onClick="operationClick"
+                android:gravity="center"
+                android:text="−"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1"
+                android:onClick="numberClick"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="numberClick"
+                android:text="2"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="numberClick"
+                android:text="3"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@color/my_pink"
+                android:onClick="operationClick"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="dotClick"
+                android:text="."
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="numberClick"
+                android:text="0"
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="delClick"
+                android:text="DEL"
+                android:textColor="@color/my_yellow"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:onClick="equalsClick"
+                android:background="@color/my_pink"
+                android:gravity="center"
+                android:text="="
+                android:textColor="@color/my_yellow"
+                android:textSize="30sp" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
