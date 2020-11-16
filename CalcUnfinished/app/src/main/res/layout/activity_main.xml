@@ -161,7 +161,7 @@
                 android:background="@color/my_pink"
                 android:onClick="operationClick"
                 android:gravity="center"
-                android:text="-"
+                android:text=""
                 android:textColor="@color/my_yellow"
                 android:textSize="30sp" />
 
