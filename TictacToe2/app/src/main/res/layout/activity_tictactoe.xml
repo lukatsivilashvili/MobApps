@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tictactoe"
+    android:background="@color/ttpurple"
+    android:gravity="center"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+
+        android:text="Tic Tac Toe"
+        android:textAlignment="center"
+        android:fontFamily="@font/audiowide"
+        android:textColor="@color/headinggreen"
+        android:textSize="50sp"
+        />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textSize="60sp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/ttorange"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textSize="60sp"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/ttorange"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textSize="60sp"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/ttorange"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textSize="60sp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/ttorange"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textSize="60sp"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/ttorange"/>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textSize="60sp"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/ttorange"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textSize="60sp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/ttorange"/>
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textSize="60sp"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/ttorange"/>
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textSize="60sp"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/ttorange"/>
+
+    </TableRow>
+
+    <TableRow
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonRestart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:backgroundTint="@color/ttred"
+            android:text="Restart"
+            android:onClick="resetButton"/>
+
+    </TableRow>
+
+
+
+
+</TableLayout>
