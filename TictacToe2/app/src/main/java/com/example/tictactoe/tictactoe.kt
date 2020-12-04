@@ -248,6 +248,7 @@ class tictactoe : AppCompatActivity(), View.OnClickListener {
         activePlayer = 1
         enableButtons()
         resetBackground()
+        resetCounter()
     }
 
     private fun resetBackground() {
@@ -272,6 +273,10 @@ class tictactoe : AppCompatActivity(), View.OnClickListener {
         button8.setText("")
         button9.setText("")
 
+    }
+
+    private fun resetCounter() {
+        clickCounter = 0
     }
 
 
