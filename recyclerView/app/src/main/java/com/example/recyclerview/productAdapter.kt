@@ -7,8 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class productAdapter(private var products:List<Product>):
-    RecyclerView.Adapter<productAdapter.ProductViewHolder>() {
+class productAdapter(private var products:List<Product>): RecyclerView.Adapter<productAdapter.ProductViewHolder>() {
 
     class ProductViewHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
 
