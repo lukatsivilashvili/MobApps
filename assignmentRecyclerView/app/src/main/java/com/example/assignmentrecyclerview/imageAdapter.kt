@@ -32,7 +32,7 @@ class imageAdapter(private var urls:List<Images>, private val context:Context): 
             .into(holder.imageView)
 
         holder.imageView.setOnClickListener {
-            Toast.makeText(context, "${pos.info}", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "${pos.info}", Toast.LENGTH_SHORT).show()
         }
 
     }
