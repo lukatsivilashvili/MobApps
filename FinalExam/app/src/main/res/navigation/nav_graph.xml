@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/navigation_editnotes">
+
+    <fragment
+        android:id="@+id/navigation_editnotes"
+        android:name="com.example.finalexam.fragments.EditNotesFragment"
+        tools:layout="@layout/fragment_edit_notes">
+        <action
+            android:id="@+id/action_navigation_editnotes_to_navigation_viewnotes"
+            app:destination="@id/navigation_viewnotes" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_viewnotes"
+        android:name="com.example.finalexam.fragments.ViewNotesFragment"
+        tools:layout="@layout/fragment_view_notes" >
+        <argument
+            android:name="heading"
+            app:argType="string"
+            android:defaultValue="No Notes" />
+        <argument
+            android:name="content"
+            app:argType="string"
+            android:defaultValue=" " />
+    </fragment>
+
+</navigation>
