@@ -16,6 +16,9 @@ import com.example.finalexam.RecyclerView.NotesInfo
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.sql.Time
+import java.util.*
+import kotlin.collections.ArrayList
 
 class EditNotesFragment: Fragment(R.layout.fragment_edit_notes) {
 
@@ -28,6 +31,10 @@ class EditNotesFragment: Fragment(R.layout.fragment_edit_notes) {
 
     private lateinit var mAuth: FirebaseAuth
     private lateinit var db:DatabaseReference
+
+    companion object {
+        var noteList = ArrayList<NotesInfo>()
+    }
 
 
 
@@ -44,6 +51,7 @@ class EditNotesFragment: Fragment(R.layout.fragment_edit_notes) {
         logOutFloatingButton = view.findViewById(R.id.logOutFloatingActionButton)
         changePassFloatingButton = view.findViewById(R.id.changePassFloatingButton)
 
+
         sendButton.setOnClickListener {
 
             val heading = headingEditText.text.toString()
@@ -51,9 +59,11 @@ class EditNotesFragment: Fragment(R.layout.fragment_edit_notes) {
 
             val notesInfo = NotesInfo(heading, content)
 
-            if (mAuth.currentUser?.uid != null) {
+            val calendar = Calendar.getInstance()
 
-                db.child(mAuth.currentUser?.uid!!).setValue(notesInfo)
+            if (mAuth.currentUser?.uid != null && heading.isNotEmpty() && content.isNotEmpty()) {
+
+                db.child(mAuth.currentUser?.uid!!).child("${calendar.timeInMillis}").setValue(notesInfo)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(view.context, "Success", Toast.LENGTH_SHORT).show()
@@ -64,6 +74,8 @@ class EditNotesFragment: Fragment(R.layout.fragment_edit_notes) {
                         }
                     }
 
+            }else {
+                Toast.makeText(view.context, "Fill the empty Fields", Toast.LENGTH_SHORT).show()
             }
 
         }

@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalexam.RecyclerView.NotesAdapter
+import com.example.finalexam.fragments.EditNotesFragment
 import com.example.finalexam.fragments.ViewNotesFragment
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -21,7 +22,7 @@ class AllNotesActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recycler)
         db = FirebaseDatabase.getInstance().reference
 
-        val adapter = NotesAdapter(ViewNotesFragment.noteList)
+        val adapter = NotesAdapter(EditNotesFragment.noteList)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
     }

@@ -17,24 +17,26 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/add"
+        app:layout_constraintVertical_bias="0.24">
 
         <EditText
-            android:textColor="@color/actbar1"
             android:id="@+id/headingEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Heading"
+            android:textColor="@color/actbar1"
             android:textColorHint="@color/actbar1" />
 
         <EditText
-            android:textColor="@color/actbar1"
             android:id="@+id/contentEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Notes"
+            android:textColor="@color/actbar1"
             android:textColorHint="@color/actbar1" />
 
         <Button
@@ -60,7 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.582"
+        app:layout_constraintVertical_bias="0.494"
         app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
 
     <TextView
@@ -80,16 +82,13 @@
         android:id="@+id/changePassFloatingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
         android:backgroundTint="#78BDDE"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toEndOf="@+id/logOutFloatingActionButton"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.494"
         app:srcCompat="@drawable/ic_outline_replay_24" />
 
     <TextView
@@ -102,10 +101,23 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintHorizontal_bias="0.849"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/changePassFloatingButton"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:text="Add a note"
+        android:textColor="@color/actbar1"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,7 +52,7 @@ class SignUpScreen : AppCompatActivity() {
             }else {
                 mAuth.createUserWithEmailAndPassword(mail, password).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        startActivity(Intent(this, LogInActivity::class.java))
+                        startActivity(Intent(this, MainActivity::class.java))
                         finish()
                     }else {
                         Toast.makeText(this, "Error !!!", Toast.LENGTH_SHORT).show()
